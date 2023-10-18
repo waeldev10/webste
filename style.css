@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
+    background-color: rgb(237, 237, 237);
+    font-family: 'Cairo', sans-serif;
+    position: relative;
+}
+#body{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    overflow: hidden;
+    top: -80px;
+    left: 0;
+    background-color: rgb(0, 0, 0,.7);
+}
+section,aside{
+    width: 50%;
+    margin: 20px auto;
+}
+section{
+    display: none;
+}
+.content,.display,.title{
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    margin: 10px auto;
+    border-bottom: 5px solid rgb(0, 128, 0,.5);
+}
+h1{
+  color: rgb(25, 104, 25);
+}
+p{
+    font-size: 20px;
+    margin: 10px 0;
+}
+textarea{
+    border: none;
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    background-color:rgb(237, 237, 237) ;
+    padding: 10px 8px;
+    font-size: 18px;
+    transition: all .4s ease-in-out;
+    overflow: auto;
+}
+input{
+    margin-right: 20px;
+    font-size: 25px;
+}
+label{
+    font-size: 18px;
+    margin-right: 5px;
+}
+textarea:focus{
+    outline: 0;
+    border: 1px solid #7cb448;
+}
+#show,#clear,#share,#copy{
+    border: navajowhite;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: rgb(25, 104, 25);
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+    
+}
+article{
+    padding:5px 10px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 10px 0;
+    background-color: #c3c2c2;
+    overflow: auto;
+}
+
+#alertBox {
+    display: none;
+    position: fixed;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    background-color: #f8f8f8;
+    border-bottom: 5px solid #7cb448;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #alertBox span {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(202, 55, 19);
+  }
+  
+  #alertBox p {
+    margin: 10px;
+    font-size: 20px;
+  }
+
+aside .title-shemmer{
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px auto;
+    background-color: #fff;
+}
+aside .title-shemmer div{
+    width: 300px;
+    border-radius: 8px;
+    height: 50px;
+    background-color: hsl(200, 20%, 70%);
+    animation: loading 1s linear infinite alternate;
+}
+aside .content-shemmer{
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+aside .content-shemmer p{
+    width: 200px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: hsl(200, 20%, 70%);
+    animation: loading 1s linear infinite alternate;
+    margin-bottom: 10px;
+}
+aside .content-shemmer .texterea{
+    width: 100%;
+    height: 100px;
+    margin: 10px auto;
+    border-radius: 8px;
+    background-color: hsl(200, 20%, 70%);
+    animation: loading 1s linear infinite alternate;
+}
+aside .content-shemmer .btn{
+    width: 80px;
+    height: 40px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background-color: hsl(200, 20%, 70%);
+    animation: loading 1s linear infinite alternate;
+}
+
+aside .display-shemmer{
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+aside .display-shemmer .dis{
+    width: 100%;
+    height: 100px;
+    margin: 10px auto;
+    border-radius: 8px;
+    background-color: hsl(200, 20%, 70%);
+    animation: loading 1s linear infinite alternate;
+}
+aside .display-shemmer .btns{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+aside .display-shemmer .btns div{
+    height: 40px;
+    border-radius: 8px;
+    background-color: hsl(200, 20%, 70%);
+    animation: loading 1s linear infinite alternate;
+}
+aside .display-shemmer .btns div:nth-child(1){
+    width: 150px;
+    margin: 10px 0;
+}
+aside .display-shemmer .btns div:nth-child(2){
+    width: 100px;
+    margin: 10px 5px 10px;
+}
+
+h6{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(25, 104, 25);
+    margin: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+h6 a{
+    color: rgb(25, 104, 25) !important ;
+}
+#dark{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 30px;
+    top: 80%;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: black;
+    font-size: 18px;
+    background-color: rgb(0, 0, 0,.3);
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#sun{
+    display: none;
+}
+
+@keyframes loading{
+    0%{
+      background-color: hsl(200, 20%, 70%);
+    }
+    100%{
+      background-color: hsl(200, 20%, 95%);
+    }
+}
+
+@media screen and (max-width:1000px){
+    body{
+        height: 800px;
+    }
+    section,aside{
+        width: 96%;
+        margin: 20px auto;
+    }.content,.display,.title{
+        padding: 10px;
+    }
+    h1{
+      font-size: 20px;
+    }
+    p{
+        font-size: 18px;
+    }
+    textarea{
+        overflow: hidden;
+        height: 150px;
+    }
+    #show,#clear,#share,#copy{
+        color: #fff;
+        padding: 8px 20px;
+    }
+    article{
+        padding:5px 10px;
+        height: 150px;
+        overflow: hidden;
+    }
+    
+    #alertBox {
+        width: 90%;
+    }
+    #dark{
+        right: 10px;
+        bottom: 20px;
+        width: 45px;
+        height: 45px;
+    }
+    h6{
+        font-size: 16px;
+    }
+}
